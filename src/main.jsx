@@ -5,7 +5,7 @@ import '../styles.css'
 import './react.css'
 
 const url = import.meta.env.VITE_SUPABASE_URL
-const key = import.meta.env.VITE_SUPABASE_ANON_KEY
+const key = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY
 const supabase = url && key && !url.includes('your-project') ? createClient(url, key) : null
 const symbols = ['⭐', '🌉', '⚓', '🏆']
 const fmt = (ms) => { if (ms == null || !Number.isFinite(ms)) return '—'; const c = Math.floor(ms / 10); return `${String(Math.floor(c / 6000)).padStart(2, '0')}:${String(Math.floor(c / 100) % 60).padStart(2, '0')}.${String(c % 100).padStart(2, '0')}` }
